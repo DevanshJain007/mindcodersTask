@@ -12,7 +12,12 @@ const QuizDashboard = () => {
   const [isStartQuiz, setIsStartQuiz] = useState(false)
   const [timer, setTimer] = useState(10)
   const [quizOver, setQuizOver] = useState(false)
-
+  const [score,setScore]=useState(0);
+//   const handleScore=()=>{
+//     if(option===questions.answer){
+//         setScore(prev=>prev+1);
+//     }
+//   }
   
   useEffect(() => {
     let interval
@@ -66,7 +71,8 @@ const QuizDashboard = () => {
 
       {quizOver && (
         <div>
-          <h2>Quiz Ended Successfully ✅</h2>
+          <h2>Quiz Ended Successfully </h2>
+          <h2>Your Score</h2>
         </div>
       )}
     </>
